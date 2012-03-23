@@ -1,0 +1,178 @@
+body
+{
+	margin:0px;
+	padding:0px;
+	font-family:Arial;
+	font-size:13px;
+	background-color:#fff;
+}
+.topbar
+{
+	height: 48px ;
+	width: 100% ;
+	background-image: url( "./img/topbar-bg.gif" ) ;
+	background-color: #6699cc ;
+	text-align:center;
+}
+.topbar img
+{
+	margin-top:13px;
+}
+ul.homelist
+{
+	margin:0px;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:5%;
+}
+ul.homelist li
+{
+	background-image: url( "img/button-bg.gif" ) ;
+	height:90px;
+	list-style:none;
+	width:45%;
+	float:left;
+	margin:0px;
+	padding:0px;
+	margin-left:10%;
+	margin-bottom:3%;
+}
+ul.homelist li:first-child
+{
+	margin-left:0px;
+}
+ul.homelist li.newrule
+{
+	clear:both;
+	margin-left:0px;
+}
+ul.homelist li img.left
+{
+	float:left;
+}
+ul.homelist li a
+{
+	display:block;
+	height:55px;
+	text-align:center;
+	vertical-align: middle;
+	text-decoration:none;
+}
+.icon
+{
+	margin-top:25px;
+}
+ul.homelist li p
+{
+	display:block;
+	width:100%;
+	margin-top:0px;
+	padding-top:5px;
+	height:100%;
+	color:#333333;
+	text-decoration:none;
+}
+ul.homelist li img.right
+{
+	float:right;
+}
+ul.homelist li div
+{
+	clear:both;
+}
+.footer
+{
+	background-image:url("img/footer-bg.gif");
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	height:60px;
+	background-color:#6699cc;
+	clear:both;
+}
+.footer .footeritem
+{
+	width:50%;
+	display:block;
+	float:left;
+}
+.footer #splitter
+{
+	float:left;
+}
+.footer .footeritem
+{
+	text-align:center;
+}
+.footer .footeritem img.button
+{
+	margin-top:20px;
+}
+.datalist
+{
+	clear:both;
+	padding:3%;
+	padding-top:20px;
+	height:430px;
+	overflow:scroll;
+}
+.ui-listview-filter
+{
+	margin-bottom:10px;
+}
+h1
+{
+	margin:0px;
+	padding:0px;
+	padding-top:12px;
+	font-size:19px;
+	font-weight:bold;
+	color:#fff;
+	text-shadow: #6699cc 1px 1px, #6699cc -1px -1px;
+	border:0px;
+	text-decoration:none;
+}
+.backbutton
+{
+	float:left;
+	position:absolute;
+	background-color:#fff;
+	border-radius: 15px;
+	color:#000;
+	margin:8px;
+	display:block;
+}
+.backbutton a
+{
+	margin:0px;
+	padding:9px;
+	padding-top:0px;
+	display:block;
+}
+
+.math
+{
+    margin-top:15px;
+}
+
+.results
+{
+    margin-top:20px;
+}
+.mcontent
+{
+	padding:10px;
+	padding-top:0px;
+	padding-bottom:10px;
+}
+.mcontent p
+{
+	font-size:15px;
+}
+.mcontent ul
+{
+	margin:0px;
+	padding:0px;
+	padding-left:20px;
+	font-size:15px;
+}
