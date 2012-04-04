@@ -2,25 +2,51 @@
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
+	
+	/*
+	 * 
+	 * Public function index()
+	 * 
+	 * Will display the homepage with in the background a beautifull image
 	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
 	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	
+	 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		
+		// TODO
+		
 	}
+	
+	
+	/*
+	 * 
+	 * Public function bgimg( $id = 0 )
+	 * 
+	 * Will return the image with the given ID. This URL will be called in the CSS file as a background source. 
+	 * 
+	 * 
+	 */
+	
+	public function bgimg( $id = 0 )
+	{
+		
+		// Is there a file ID given?
+		
+		if( $id == 0 )
+		{
+			
+			$id	=	$this->Welcome_method->getRandomBgImgId();
+			// TODO still needs to be created...
+			
+		}
+		
+		// TODO display the image...
+		
+	}
+	 
 }
 
 /* End of file welcome.php */
