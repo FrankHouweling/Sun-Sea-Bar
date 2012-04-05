@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 		if( $id == 0 )
 		{
 			
-			$id	=	$this->Welcome_method->getRandomBgImgId();
+			$id	=	$this->Welcome_method->getRandomImgId( true );
 			
 		}
 		
