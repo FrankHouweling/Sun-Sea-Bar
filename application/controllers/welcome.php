@@ -2,6 +2,13 @@
 
 class Welcome extends CI_Controller {
 
+	function __construct()
+	{
+		
+		parent::__construct();
+		$this->load->model('Welcome_method');
+		
+	}
 	
 	/*
 	 * 
@@ -41,11 +48,11 @@ class Welcome extends CI_Controller {
 		{
 			
 			$id	=	$this->Welcome_method->getRandomBgImgId();
-			// TODO still needs to be created...
 			
 		}
 		
-		// TODO display the image...
+		
+		echo $id;
 		
 	}
 	 
