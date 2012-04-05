@@ -18,6 +18,8 @@ class Welcome extends CI_Controller {
 		
 		// TODO
 		
+		echo "TODO!";
+		
 	}
 	
 	
