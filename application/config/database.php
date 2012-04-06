@@ -49,13 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-<<<<<<< HEAD:application/config/database.php
-$db['default']['username'] = 'sunseabar';
-$db['default']['password'] = 'sunseabar';
-=======
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
->>>>>>> changing config files and started to create some models and views:CodeIgniter_2.1.0/application/config/database.php
 $db['default']['database'] = 'Sunseabar';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
