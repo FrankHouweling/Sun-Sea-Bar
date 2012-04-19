@@ -5,8 +5,6 @@ class Welcome extends CI_Controller {
 	function __construct()
 	{
 		
-		parent::__construct();
-		$this->load->model('Welcome_method');
 		
 	}
 	
@@ -41,6 +39,7 @@ class Welcome extends CI_Controller {
 	
 	public function bgimg( $id = 0 )
 	{
+		$this->load->model('Welcome_method');
 		
 		// Is there a file ID given?
 		
