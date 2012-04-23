@@ -1,6 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Menu extends CI_Controller {
+	
+	public function __construct()
+   	{
+   		
+    	parent::__construct();
+		$this->load->model(Menu_model);
+			
+	}
 
 	/*
 	 * 
@@ -12,8 +20,9 @@ class Menu extends CI_Controller {
 
 	public function index()
 	{
+	    $data = $this->Studies_model->getMenuCat();
 		
-		// TODO
+		$this->load->view( "menu", array("name" => $data));    		
 		
 	}
 	
