@@ -5,6 +5,11 @@ class Welcome extends CI_Controller {
 	function __construct()
 	{
 		
+<<<<<<< HEAD
+=======
+		#parent::__construct();
+		//$this->load->model('Welcome_method');
+>>>>>>> Commit
 		
 	}
 	
