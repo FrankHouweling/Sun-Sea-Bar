@@ -5,8 +5,8 @@ class Menu extends CI_Controller {
 	public function __construct()
    	{
    		
-    	//parent::__construct();
-		//$this->load->model(Menu_model);
+    	parent::__construct();
+		$this->load->model("Menu_model");
 			
 	}
 
@@ -21,12 +21,13 @@ class Menu extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model("Menu_model");	    
 	
 	    $data = $this->Menu_model->getMenuCat();
-		
+
+		$this->load->view("header");
 		$this->load->view( "menu", array("name" => $data));    		
-		//echo "TODOOOO";
+		$this->load->view("footer");
+	
 	}
 	
 	/*

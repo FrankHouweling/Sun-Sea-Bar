@@ -41,7 +41,6 @@ class Welcome extends CI_Controller {
 	
 	public function bgimg( $id = 0 )
 	{
-		$this->load->model('Welcome_method');
 		
 		// Is there a file ID given?
 		
