@@ -52,11 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-<<<<<<< HEAD:application/config/autoload.php
 $autoload['libraries'] = array('database','session');
-=======
-$autoload['libraries'] = array('database');
->>>>>>> changing config files and started to create some models and views:CodeIgniter_2.1.0/application/config/autoload.php
 
 
 /*

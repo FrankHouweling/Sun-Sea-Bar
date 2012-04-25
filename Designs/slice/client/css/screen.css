@@ -12,5 +12,45 @@ body
 {
 	background-image: url('../img/bg.jpg') ;
 	background-size: 100%;
-	background-origin: content
+	background-origin: content;
+	font-family:Arial;
+}
+#ticker #leftfade
+{
+	float:left;
+	width:69px;
+	background-image:url("../img/leftfade.png");
+	height:27px;
+}
+#ticker #leftfade p
+{
+	font-size:14px;
+	font-weight:bold;
+	padding:5px;
+	float:left;
+}
+#ticker #leftfade img
+{
+	margin-top:5px;
+	float:left;
+}
+#ticker #rightfade
+{
+	float:right;
+	height:27px;
+	background-image:url('../img/rightfade.png');
+	width:29px;
+}
+#ticker #content
+{
+	margin-left:69px;
+	margin-right:29px;
+	background-color:#fff;
+	height:27px;
+	background-image:url('../img/bg-ticker.gif');
+}
+#ticker #content p
+{
+	padding:6px;
+	font-size:12px;
 }
