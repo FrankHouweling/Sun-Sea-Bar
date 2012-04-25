@@ -16,6 +16,7 @@ class Menu extends CI_Controller {
 	 * 
 	 * Will display all menu catagories for navigation
 	 * 
+	 * 
 	 */
 
 	public function index()
