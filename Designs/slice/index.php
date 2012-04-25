@@ -27,9 +27,21 @@
 			</div>
 			
 			<div id="rightfade">
-				
+				<p><img src="client/img/icon/twitter.gif" alt="Twitter" /></p>
 			</div>
 			
+		</div>
+		
+		<div id="header">
+			
+			<img src="client/img/logo.png" alt="SunSeaBar" />
+			
+		</div>
+		
+		<div id="menuopen">
+			<div id="left"></div>
+			<img src="client/img/menu-button.png" alt="Menu Button" />
+			<div id="right"></div>
 		</div>
 		
 	</body>

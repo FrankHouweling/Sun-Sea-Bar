@@ -40,6 +40,11 @@ body
 	height:27px;
 	background-image:url('../img/rightfade.png');
 	width:29px;
+	margin-top:-27px;
+}
+#ticker #rightfade p
+{
+	padding:4px;
 }
 #ticker #content
 {
@@ -53,4 +58,35 @@ body
 {
 	padding:6px;
 	font-size:12px;
+}
+#header
+{
+	text-align:center;
+	padding:10px;
+}
+#menuopen
+{
+	position:absolute;
+	text-align:center;
+	bottom:0px;
+	width:100%;
+}
+#menuopen #left
+{
+	background-image:url("../img/bg-menubutton.png");
+	height:44px;
+	float:left;
+	width:100px;
+}
+#menuopen img
+{
+	
+}
+#menuopen #right
+{
+	background-image:url("../img/bg-menubutton.png");
+	height:44px;
+	float:right;
+	width:100px;
+	display:block;
 }
