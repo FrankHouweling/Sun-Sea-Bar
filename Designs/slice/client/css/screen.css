@@ -1,0 +1,16 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#ticker
+{
+	height:27px;
+	width:100%;
+}
+body
+{
+	background-image: url('../img/bg.jpg') ;
+	background-size: 100%;
+	background-origin: content
+}
