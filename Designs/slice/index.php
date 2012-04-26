@@ -7,11 +7,39 @@
 			Sun Sea Bar - Home
 		</title>
 		
-		<link rel="stylesheet" media="screen" href="client/css/screen.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		
+		<link rel="stylesheet" href="client/css/screen.css" />
+		
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+		<script type="text/javascript">
+			
+						
+			$(window).resize(function() {
+				doeResize( );
+			});
+		
+			function doeResize()
+			{
+				
+				$("#menuopen #left").css("width", ( ($(window).width() - 317) / 2 ) );
+				
+			
+				$("#menuopen #right").css("width", ( ($(window).width() - 317) / 2 ) );
+				
+			 	
+				
+			}
+			
+		</script>
 		
 	</head>
 	
-	<body>
+	<body onload="doeResize();">
+		
+		<img src="client/img/bg.jpg" id="bgfoto" alt="" />
 		
 		<div id="ticker">
 			
@@ -38,9 +66,21 @@
 			
 		</div>
 		
+		<div id="nav">
+			
+			<a onclick="">
+				<img src="client/img/navbuttonleft.png" id="left" alt="Vorige foto" />
+			</a>
+			
+			<a onclick="">
+				<img src="client/img/navbuttonright.png" id="right" alt="Volgende foto" />
+ 			</a>
+			
+		</div>
+		
 		<div id="menuopen">
 			<div id="left"></div>
-			<img src="client/img/menu-button.png" alt="Menu Button" />
+			<a href="hoofdmenu/"><img src="client/img/menu-button.png" alt="Menu Button" /></a>
 			<div id="right"></div>
 		</div>
 		
