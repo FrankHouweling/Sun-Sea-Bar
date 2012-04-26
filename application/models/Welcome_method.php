@@ -16,23 +16,23 @@
 		 * 
 		 */
 
-		public function getRandomImgId( $forBg = false )
+		public function getRandomImg( $forBg = false, $lastimage = "dinges" )
 		{
 			
 			if( $forBg == true )
-				$query 	= $this->db->query("SELECT id FROM images WHERE default_homepage_image = 1 ORDER BY RAND()");
+				$query 	= $this->db->query("SELECT image_path FROM images WHERE default_homepage_image = 1 AND image_path != '" . mysql_real_escape_string($lastimage) . "' ORDER BY RAND()");
 			else
-				$query 	= $this->db->query("SELECT id FROM images ORDER BY RAND()");
+				$query 	= $this->db->query("SELECT image_path FROM images WHERE image_path != '" . mysql_real_escape_string($lastimage) . "' ORDER BY RAND()");
 			
 			$result	= $query->result_array(); 
 			
 			if( count($result) == 0 )
 				return false;
 			else				
-				return $result[0]["id"];
+				return $result[0]["image_path"];
 			
 		}
-  
+
 	}
 
 ?>

@@ -4,12 +4,9 @@ class Welcome extends CI_Controller {
 
 	function __construct()
 	{
-		
-<<<<<<< HEAD
-=======
-		#parent::__construct();
-		//$this->load->model('Welcome_method');
->>>>>>> Commit
+	
+		parent::__construct();
+		$this->load->model('Welcome_method');
 		
 	}
 	
@@ -28,7 +25,7 @@ class Welcome extends CI_Controller {
 		
 		// TODO
 		
-		echo "TODO!";
+		$this->load->view( "homepage", array("bgimg"=>$this->bgimg()) );
 		
 	}
 	
@@ -44,19 +41,32 @@ class Welcome extends CI_Controller {
 	
 	public function bgimg( $id = 0 )
 	{
-		$this->load->model('Welcome_method');
 		
-		// Is there a file ID given?
-		
-		if( $id == 0 )
+		if( isset($_POST['richting']) )
 		{
 			
-			$id	=	$this->Welcome_method->getRandomImgId( true );
+			// AJAX!
+			
+			$new	= $this->Welcome_method->getRandomImg( false, $this->session->userdata('last') );
+			
+			$this->session->set_userdata( array("last"=>$new) );
+			
+			echo $new;
+			
+		}
+		else
+		{
+			
+			// Eerste foto pakken
+			
+			$foto	=	$this->Welcome_method->getRandomImg( true );
+			
+			$this->session->set_userdata( array("last"=>$foto) );
+			
+			return $foto;
 			
 		}
 		
-		
-		echo $id;
 		
 	}
 	 
