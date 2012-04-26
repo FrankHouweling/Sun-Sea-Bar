@@ -4,10 +4,10 @@
 	<div class="content-primary">	
 		<ul data-role="listview" data-theme="b">
 					
-			<?php foreach($name as $category): ?>
+			<?php foreach($title as $item): ?>
 			   
 			   <li>
-			   		<a href="http://localhost/~maurice/Sun-Sea-Bar/index.php/menu/<?php echo $category['link']?>"><?php echo $category['name']?></a>
+			   		<a href="http://localhost/~maurice/Sun-Sea-Bar/index.php/menu/<?php echo $item['link']?>"><?php echo $item['title']?></a>
 			   </li>
 	
 	   		<?php endforeach; ?>
