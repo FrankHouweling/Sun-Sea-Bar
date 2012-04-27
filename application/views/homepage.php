@@ -18,11 +18,15 @@
 		<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> -->
 		<meta name="viewport" content = "width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1" />  
 
+		<link rel="apple-touch-startup-image" href="client/img/preload.jpg" />  
+
 		<link rel="apple-touch-icon" href="client/img/icon.png"/>  
 
 		<script type="text/javascript">
 			
 			active = 1;
+			
+			current = 1;
 						
 			$(window).resize(function() {
 				doeResize( );
@@ -34,14 +38,42 @@
 				$("#menuopen #left").css("width", ( ($(window).width() - 317) / 2 ) );
 				
 			
-				$("#menuopen #right").css("width", ( ($(window).width() - 317) / 2 ) );
+				$("#menuopen #right").css("width", ( ($(window).width() - 317) / 2 ) +1 );
 				
 			 	
 				
 			}
 			
+			function changeTicker()
+			{
+				
+				$.ajax({
+				  url: "index.php/welcome/tickerItem"
+				}).done(function( msg ) {
+					$("#ticker #content p").html(msg);
+					if( current = 1 )
+					{
+						$("#content #2").html(msg);
+						$("#content #2").fadeIn("slow");
+						$("#content #1").fadeOut("slow");
+						current = 2
+					}
+					else
+					{
+						$("#content #1").html(msg);
+						$("#content #1").fadeIn("slow");
+						$("#content #2").fadeOut("slow");
+						current = 1
+					}
+				});
+				
+				window.setTimeout( "changeTicker()", 9000 );
+				
+			}
+			
 			function changeFoto( dinges, auto )
 			{
+
 
 				$.ajax({
 				  type: "POST",
@@ -73,6 +105,30 @@
 					if( auto == true )
 					{
 						
+						$("#click-to-open").hide();
+						
+						// Slidedown
+						
+						if (window.navigator.userAgent.indexOf('iPhone') != -1)
+						{
+							
+							if (window.navigator.standalone == true)
+							{
+								
+								//alert( "Standalone!" );
+								
+							}
+							else
+							{
+								
+								$("#hoe-install").fadeIn('slow');
+								$("#header").css("margin-top","30px");
+								$("#hoe-install").slideDown('slow');
+								
+							}
+							
+						}
+						
 						window.setTimeout( "changeFoto('next', true);", 15000 );
 						
 					}
@@ -84,13 +140,16 @@
 			
 			window.setTimeout( "changeFoto('next', true);", 15000 );
 			
+			window.setTimeout( "changeTicker()", 9000 );
 			
 			
 		</script>
 		
 	</head>
 	
-	<body onload="doeResize();">
+	<body onload="doeResize();$('#preloader').fadeOut('slow');">
+		
+		<img src="client/img/preload.jpg" style="position:absolute;z-index:9999;width:100%;height:100%;" id="preloader" alt="" />
 		
 		<img src="<?php echo $bgimg?>" id="bgfoto2" alt="" />
 		
@@ -98,19 +157,24 @@
 		
 		<div id="ticker">
 			
+			<div style="width:100%;height:30px;background-color:#000;display:none;" id="hoe-install">
+				<p style="color:#fff;font-size:12px;text-align:center;padding:7px;">Plaats deze app op je homescreen.</p>
+			</div>
+			
 			<div id="leftfade">
 				<p>
 					22 &#176;C
 				</p>
-				<img src="client/img/icon/sun.gif" alt="Zonnig" />
+				<img src="client/img/icon/sun.gif" alt="Zonnig" style="width:17px;height:16px;" />
 			</div>
 			
 			<div id="content">
-				<p>Dit is bijv. een twitterbericht die wordt...</p>
+				<p id="1" style="position:absolute;z-index:999;"><?php echo $tickerItem ?></p>
+				<p id="2" style="position:absolute;z-index:1000;display:none;">Alternative.</p>
 			</div>
 			
 			<div id="rightfade">
-				<p><img src="client/img/icon/twitter.gif" alt="Twitter" /></p>
+				<p><a href="https://twitter.com/#!/sunseabarwaz" target="_blank"><img src="client/img/icon/twitter.gif" alt="Twitter" /></a></p>
 			</div>
 			
 		</div>
@@ -131,6 +195,10 @@
 				<img src="client/img/navbuttonright.png" onclick="changeFoto('next', false)" id="right" alt="Volgende foto" />
  			</a>
 			
+		</div>
+		
+		<div id="click-to-open">
+			<img src="client/img/klik-om-te-openen.png" alt="Klik om te openen" />
 		</div>
 		
 		<div id="menuopen">

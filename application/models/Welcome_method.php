@@ -32,6 +32,76 @@
 				return $result[0]["image_path"];
 			
 		}
+		
+		public function updateTicker()
+		{
+			
+			
+			$xmlstr	=	@file_get_contents("https://twitter.com/statuses/user_timeline/122095251.xml?count=10");
+			
+			$text	=	@simplexml_load_string($xmlstr);
+			
+			$berichten	=	array();
+			
+			if( count($text->status) > 0 ){
+				foreach( $text->status as $ber )
+				{
+					
+					$this->addToCache( $ber->text, $ber->id );
+					
+				}
+			}
+			
+		}
+		
+		public function addToCache( $text, $id )
+		{
+			
+			$get	=	$this->db->query("SELECT * FROM twittercache WHERE id = '" . $id . "' OR text = '" . $text . "'");
+			
+			$result	=	$get->result_array();
+			
+			if( count($result) == 0 AND str_replace("Vacature","",$text) == $text ){
+				
+				$this->db->query( "INSERT INTO twittercache( id, text ) VALUES('" . $id . "','" . $text . "')" );
+			
+			}
+			
+		}
+		
+		public function getAllTicker()
+		{
+			
+			$query 	= $this->db->query("SELECT * FROM twittercache ORDER BY id DESC");
+		
+			$result	= $query->result_array(); 
+			
+			if( count($result) == 0 )
+				return false;
+			else				
+				return $result;
+			
+		}
+		
+		public function getTickerItem( $item = 1 )
+		{
+			
+			if( rand(0,70) == 1 )
+			{
+				$this->updateTicker();
+			}
+			
+			$berichten	=	$this->getAllTicker();
+			
+			
+			if( !isset($berichten[ $item-1 ]) )
+			{
+				return false;
+			}
+			
+			return "<a href='https://twitter.com/#!/SunseabarWAZ/status/" . $berichten[ $item-1 ]["id"] . "' target='_blank'>" . substr($berichten[ $item-1 ]["text"],0,33) . "..</a>";
+			
+		}
 
 	}
 

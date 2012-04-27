@@ -4,6 +4,7 @@ class Welcome extends CI_Controller {
 
 	function __construct()
 	{
+		
 		parent::__construct();
 		
 		$this->load->model('Welcome_method');
@@ -25,10 +26,53 @@ class Welcome extends CI_Controller {
 		
 		// TODO
 		
-		$this->load->view( "homepage", array("bgimg"=>$this->bgimg()) );
+		$this->load->view( "homepage", 
+			array(
+				"bgimg"=>$this->bgimg(),
+				"tickerItem"=>$this->tickerItem(false)));
+				
+		$this->session->set_userdata(array("lastTicker"=>1));
 		
 	}
 	
+	public function tickerItem( $extern = true )
+	{
+		
+		if( $extern == false )
+		{
+			
+			$this->session->set_userdata( array("lastTicker"=>2) );
+			
+			return $this->Welcome_method->getTickerItem(1);
+			
+		}
+		else
+		{
+			
+			$dat	=	$this->Welcome_method->getTickerItem( $this->session->userdata('lastTicker') + 1 );
+			
+			$vorige	=	(int)$this->session->userdata('lastTicker');
+			
+			$this->session->unset_userdata('lastTicker');
+			
+			$this->session->set_userdata( "lastTicker" , ( $vorige + 1 ) );
+			
+			if( $dat !== false )
+			{
+				
+				echo $dat;
+				
+			}
+			else
+			{
+				
+				$this->session->set_userdata( "lastTicker",1 );
+				echo $this->Welcome_method->getTickerItem( $this->session->userdata('lastTicker') );
+				
+			}
+		}
+		
+	}
 	
 	/*
 	 * 
@@ -46,10 +90,11 @@ class Welcome extends CI_Controller {
 		{
 			
 			// AJAX!
-			
+						
 			$new	= $this->Welcome_method->getRandomImg( false, $this->session->userdata('last') );
 			
 			$this->session->set_userdata( array("last"=>$new) );
+			
 			
 			echo $new;
 			

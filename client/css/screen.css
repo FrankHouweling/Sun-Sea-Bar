@@ -68,6 +68,12 @@ body
 	height:27px;
 	background-image:url('../img/bg-ticker.gif');
 }
+#ticker #content p a
+{
+	font-weight:normal;
+	color:#000;
+	text-decoration:none;
+}
 #ticker #content p
 {
 	padding:6px;
@@ -116,4 +122,11 @@ body
 #nav #right
 {
 	float:right;
+}
+#click-to-open
+{
+	position:absolute;
+	left:50%;
+	margin-left:-134.5px;
+	bottom:70px;
 }
