@@ -27,21 +27,37 @@ class menu_model extends CI_Model {
 
     /**
      * 
-	 * Public function getMenuItems( $catID )
+	 * Public function getCatItems( $catID )
      *
-     * show "results" (menu items) from menu_item
-     *
+     * show "results" (category items) from menu_item
+     */
      
-    public function getMenuItems( $catID )
+    public function getCatItems( $catID )
     {
          
 
-         $result = $this->db->query("SELECT * FROM menu_item WHERE id = '" . $catID . "'");
+         $result = $this->db->query("SELECT * FROM menu_item WHERE catID = '" . $catID . "'");
+
+	     return $result->result_array();
+    
+    } 
+    
+	/**
+     * 
+	 * Public function getMenuItem( $catID )
+     *
+     * show "result" (menu item) from menu_item
+     *
+     
+    public function getMenuItem( $catID )
+    {
+         
+
+         $result = $this->db->query("SELECT * FROM menu_item WHERE catID = '" . $catID . "'");
 
 	     return $result->result_array();
     
     } */
-    
 }
 
 ?>

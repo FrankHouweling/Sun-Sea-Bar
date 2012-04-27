@@ -4,8 +4,13 @@ class Welcome extends CI_Controller {
 
 	function __construct()
 	{
+<<<<<<< HEAD
 	
 		parent::__construct();
+=======
+		parent::__construct();
+		
+>>>>>>> 628167defb4e3c6cca7a921f56b20423a550dcd2
 		$this->load->model('Welcome_method');
 		
 	}
