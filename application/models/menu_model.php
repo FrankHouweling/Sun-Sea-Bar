@@ -41,8 +41,46 @@ class menu_model extends CI_Model {
 	     return $result->result_array();
     
     } 
+	
     
 	/**
+     * 
+	 * Public function menuCatLinkToId($link)
+     *
+     * gets the right category items for given catID and returns the link
+   	 */	  
+   
+   
+   Public function menuCatLinkToId($link)
+   {
+
+		$result = $this->db->query("SELECT id FROM menu_item WHERE catID = (SELECT id FROM menu_cat WHERE link = '" . $link . "')");
+
+		$resar	=	$result->result_array();
+
+	    return $resar[0]["id"];
+	
+   }
+   
+   
+   /**
+     * 
+	 * Public function menuCatIdToName($catName)
+     *
+     * gets the right category name for given catID and returns the name
+   	 * 
+   	 
+   Public function menuCatIdToName($name)
+   {
+   	
+		$result = $this->db->query("SELECT id FROM menu_item WHERE catID = (SELECT id FROM menu_cat WHERE name = '" . $name . "')");
+
+		$result->result_array();		
+		
+   } 
+   
+   
+   /**
      * 
 	 * Public function getMenuItem( $catID )
      *
