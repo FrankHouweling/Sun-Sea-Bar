@@ -29,7 +29,9 @@ class Nav extends CI_Controller {
 		$this->load->view( "header" , 
 			array(
 				"bgimg"=> $this->bgimg(),
-				"tickerItem"=>$this->tickerItem(false)) );
+				"tickerItem"=>$this->tickerItem(false),
+				"nopreload" => "true",
+				"fullpath" => "http://localhost/~frankhouweling/Sun-Sea-Bar/" ) );
 		
 		$this->load->view( "nav" );
 		

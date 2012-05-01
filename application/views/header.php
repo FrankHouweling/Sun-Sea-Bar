@@ -148,7 +148,13 @@
 	
 	<body onload="doeResize();$('#preloader').fadeOut('slow');">
 		
-		<img src="client/img/preload.jpg" style="position:absolute;z-index:9999;width:100%;height:100%;" id="preloader" alt="" />
+		<?php
+			if( !isset( $nopreload ) ){
+		?>
+			<img src="client/img/preload.jpg" style="position:absolute;z-index:9999;width:100%;height:100%;" id="preloader" alt="" />
+		<?php
+			}
+		?>
 		
 		<img src="<?php echo $bgimg?>" id="bgfoto2" alt="" />
 		
