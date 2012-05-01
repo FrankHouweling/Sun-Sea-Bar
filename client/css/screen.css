@@ -91,6 +91,30 @@ body
 	bottom:0px;
 	width:100%;
 }
+#menuclose #left, #menuclose #right
+{
+	background-image:url("../img/bg-buttonmenu.png");
+	height:74px;
+	width:50px;
+	display:block;
+}
+#menuclose #left
+{
+	float:left;
+}
+#menuclose #right
+{
+	float:right;
+}
+#menuclose img
+{
+	float:left;
+}
+#menuclose
+{
+	position:absolute;
+	top:90px;
+}
 #menuopen #left
 {
 	background-image:url("../img/bg-menubutton.png");

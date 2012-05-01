@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Nav extends CI_Controller {
 
 	function __construct()
 	{
@@ -28,13 +28,13 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view( "header" , 
 			array(
-				"bgimg"=>$this->bgimg(),
+				"bgimg"=> $this->bgimg(),
 				"tickerItem"=>$this->tickerItem(false)) );
 		
-		$this->load->view( "homepage" );
+		$this->load->view( "nav" );
 		
 		$this->load->view( "footer" );
-				
+		
 		$this->session->set_userdata(array("lastTicker"=>1));
 		
 	}
@@ -118,8 +118,5 @@ class Welcome extends CI_Controller {
 		
 		
 	}
-	 
+	
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
