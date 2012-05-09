@@ -32,7 +32,7 @@ class Menu extends CI_Controller {
 	
 	/*
 	 * 
-	 * Public function category( )
+	 * Public function category()
 	 * 
 	 * Will display all subcetagories followed by the different items in the category.
 	 * 
@@ -56,11 +56,11 @@ class Menu extends CI_Controller {
 	
 	/*
 	 * 
-	 * Public function item( )
+	 * Public function item()
 	 * 
 	 * Will display a menu item.
 	 * 
-	 *
+	 */
 	
 	public function item()
 	{
@@ -76,7 +76,7 @@ class Menu extends CI_Controller {
 		$this->load->view( "menu_item", array("name" => $data));    		
 		$this->load->view("footer");
 		
-	} */
+	} 
 	
 }
 
