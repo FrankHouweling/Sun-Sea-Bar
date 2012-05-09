@@ -70,12 +70,12 @@ class menu_model extends CI_Model {
 	 * Public function menuCatIdToName($catName)
      *
      * gets the right category name for given catID and returns the name
-   	 */
+   	 *
    	 
    Public function menuCatIdToName($name)
    {
    	
-		$result = $this->db->query("SELECT id FROM menu_item WHERE catID = (SELECT id FROM menu_cat WHERE name = '" . $name . "')");
+		$result = $this->db->query("SELECT id FROM menu_cat WHERE name = '" . $name . "'");
 
 		$result->result_array();		
 		
@@ -87,7 +87,7 @@ class menu_model extends CI_Model {
 	 * Public function getMenuItem( $catID )
      *
      * show "result" (menu item) from menu_item
-     */
+     *
      
     public function getMenuItem( $catID )
     {
@@ -97,7 +97,7 @@ class menu_model extends CI_Model {
 
 	     return $result->result_array();
     
-    } 
+    } */
 }
 
 ?>

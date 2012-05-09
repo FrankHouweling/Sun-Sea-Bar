@@ -60,7 +60,7 @@ class Menu extends CI_Controller {
 	 * 
 	 * Will display a menu item.
 	 * 
-	 */
+	 *
 	
 	public function item()
 	{
@@ -76,7 +76,7 @@ class Menu extends CI_Controller {
 		$this->load->view( "menu_item", array("name" => $data));    		
 		$this->load->view("footer");
 		
-	} 
+	} */ 
 	
 }
 
