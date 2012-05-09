@@ -14,7 +14,7 @@ class Menu extends CI_Controller {
 	 * 
 	 * Public function index()
 	 * 
-	 * Will display all menu catagories 
+	 * Will display all menu categories 
 	 * 
 	 * 
 	 */
@@ -32,15 +32,14 @@ class Menu extends CI_Controller {
 	
 	/*
 	 * 
-	 * Public function catagorie( )
+	 * Public function category( )
 	 * 
-	 * Will display all subcatagories followed by the different items in the catagorie.
+	 * Will display all subcetagories followed by the different items in the category.
 	 * 
 	 */
 	
 	public function category()
 	{
-		//$cat_name = $this->Menu_model->menuCatIdToName($name);
 			
 		$link 	=  $this->uri->segment(3,0);
 	
@@ -61,7 +60,7 @@ class Menu extends CI_Controller {
 	 * 
 	 * Will display a menu item.
 	 * 
-	 */
+	 *
 	
 	public function item()
 	{
@@ -77,7 +76,7 @@ class Menu extends CI_Controller {
 		$this->load->view( "menu_item", array("name" => $data));    		
 		$this->load->view("footer");
 		
-	}
+	} */
 	
 }
 

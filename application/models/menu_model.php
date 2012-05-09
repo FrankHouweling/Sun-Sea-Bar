@@ -36,9 +36,11 @@ class menu_model extends CI_Model {
     {
          
 
-         $result = $this->db->query("SELECT * FROM menu_item WHERE catID = '" . $catID . "'");
-
-	     return $result->result_array();
+        $result = $this->db->query("SELECT * FROM menu_item WHERE catID = '" . $catID . "'");
+        
+        //echo "SELECT * FROM menu_item WHERE catID = '" . $catID . "'";
+		//die();
+	    return $result->result_array();
     
     } 
 	
