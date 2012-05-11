@@ -6,7 +6,7 @@
 
 			<?php foreach($name as $item): ?>
 			   <li>
-			   		<a href="http://localhost/~maurice/Sun-Sea-Bar/index.php/menu/<?php echo $item['link']?>"><?php echo $item['title']?></a>
+			   		<a href="http://localhost/~maurice/Sun-Sea-Bar/index.php/menu/item/<?php echo $item['link']?>" data-transition="slidefade"><?php echo $item['title']?></a>
 			   </li>
 	
 	   		<?php endforeach; ?>

@@ -23,10 +23,8 @@ class Welcome extends CI_Controller {
 	 
 	public function index()
 	{
-		
-		// TODO
-		
-		$this->load->view( "header" , 
+				
+		$this->load->view( "header_homepage" , 
 			array(
 				"bgimg"=>$this->bgimg(),
 				"tickerItem"=>$this->tickerItem(false)) );

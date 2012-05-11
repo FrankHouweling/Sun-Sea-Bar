@@ -26,12 +26,12 @@ class Nav extends CI_Controller {
 		
 		// TODO
 		
-		$this->load->view( "header" , 
+		$this->load->view( "header_homepage" , 
 			array(
 				"bgimg"=> $this->bgimg(),
 				"tickerItem"=>$this->tickerItem(false),
 				"nopreload" => "true",
-				"fullpath" => "http://localhost/~frankhouweling/Sun-Sea-Bar/" ) );
+				"fullpath" => "http://localhost/~maurice/Sun-Sea-Bar/" ) );
 		
 		$this->load->view( "nav" );
 		

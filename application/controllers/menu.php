@@ -60,23 +60,18 @@ class Menu extends CI_Controller {
 	 * 
 	 * Will display a menu item.
 	 * 
-	 *
+	 */
 	
 	public function item()
 	{
-		
-		$link 	=  $this->uri->segment(4,0);
-	
-		$id		=  $this->Menu_model->menuCatLinkToId($link);
-	
-		$data   =  $this->Menu_model->getCatItems( $id );
-		
-	
+		$link = $this->uri->segment(3,0);
+		$data   =  $this->Menu_model->getMenuItem($link);
+
 		$this->load->view("header");
-		$this->load->view( "menu_item", array("name" => $data));    		
+		$this->load->view( "menu_item", array("name" => $data[0]));    		
 		$this->load->view("footer");
 		
-	} */ 
+	} 
 	
 }
 
