@@ -24,8 +24,8 @@ class Menu extends CI_Controller {
 	
 	    $data = $this->Menu_model->getMenuCat();
 
-		$this->load->view("header");
-		$this->load->view( "menu", array("name" => $data));    		
+		$this->load->view("header", array("page" => "Menukaart", "pagetitle" => "Menukaart"));
+		$this->load->view("menu", array("name" => $data));    		
 		$this->load->view("footer");
 	
 	}
@@ -45,11 +45,14 @@ class Menu extends CI_Controller {
 	
 		$id		=  $this->Menu_model->menuCatLinkToId($link);
 	
-		$data   =  $this->Menu_model->getCatItems( $id );
+		$data   =  $this->Menu_model->getCatItems($id);
 		
-	
-		$this->load->view("header");
-		$this->load->view( "cat_items", array("name" => $data));    		
+		
+		$title 		=  	$this->Menu_model->menuPageName($link);
+		$pageName   = 	$title[0]["name"];
+				
+		$this->load->view("header", array("page" => "Menukaart", "pagetitle" => $pageName ));
+		$this->load->view("cat_items", array("name" => $data));    		
 		$this->load->view("footer");
 			
 	}
@@ -65,10 +68,11 @@ class Menu extends CI_Controller {
 	public function item()
 	{
 		$link = $this->uri->segment(3,0);
+		
 		$data   =  $this->Menu_model->getMenuItem($link);
 
-		$this->load->view("header");
-		$this->load->view( "menu_item", array("name" => $data[0]));    		
+		$this->load->view("header", array("page" => "noTitle"));
+		$this->load->view("menu_item", array("name" => $data[0]));    		
 		$this->load->view("footer");
 		
 	} 

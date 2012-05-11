@@ -79,7 +79,22 @@ class menu_model extends CI_Model {
 	
    } 
    
+   /**
+    * Public function menuPageName($pageName)
+    * 
+    * gets the name/title of the page, voorgerechten, hoofdgerechten, nagerechten, ...
+    * 
+    */
    
+   
+   Public function menuPageName($pageName)
+   {
+   	
+		$query = $this->db->query("SELECT name FROM menu_cat WHERE link = '" . $pageName . "'");
+		
+		return $query->result_array();
+	
+   }
 }
 
 ?>

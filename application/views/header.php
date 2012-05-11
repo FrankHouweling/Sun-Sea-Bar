@@ -27,3 +27,30 @@
 	</head>
 	
 <body>
+	<div class="topbar">
+				<?php
+					if( $page == "noTitle" )
+					{
+						// don't show a title in this section!
+						?>	
+						<?php
+					}
+					else
+					{
+						?>
+							<h2>
+								<?php 
+									if( strlen($pagetitle) > 20 )
+									{
+										echo substr($pagetitle,0,17) . "...";
+									}
+									else
+									{
+										echo $pagetitle;
+									}
+								?>
+							</h2>
+						<?php	
+					}
+				?>
+		</div>
