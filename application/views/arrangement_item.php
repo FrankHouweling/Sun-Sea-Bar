@@ -7,7 +7,7 @@
 		</div>	 
 			   		<br />
 		<div class="content">	   		
-			   		<?php echo $name["content"] ?>
+			   		<?php echo $name[nl2br("content")] ?>
 		</div>	   		
 			   		<br />
 		<div class="price">
