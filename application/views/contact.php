@@ -31,19 +31,19 @@
 	<a href="mailto:info@sunseabar.nl">info@sunseabar.nl</a>
 	<br /> <br />
 	
-	<?php echo "Note: hieronder maken we nog een Google maps routeplanner en bepalen we de openingstijd van de dag, gebasseerd op welke dag het is en welke maand het is... evt. nog een linkje naar pagina waar ze brochure kunnen aanvragen, zie site..." ?>
-	<br /> <br />
+	<?php echo "Note: hieronder maken we nog een Google maps routeplanner evt. nog een linkje naar pagina waar ze brochure kunnen aanvragen, zie site..." ?>
+	<br /> 
  
  	<?php
 	date_default_timezone_set('Europe/Amsterdam');
 	//verander de 'taal' van php
-	//standaard use php english but if your want you can edit it to any other language. M,e info can be found at http://www.php.net
+	//standaard use php english but if your want you can edit it to any other language. More info can be found at http://www.php.net
 	setlocale(LC_TIME, 'NL_nl');
 	//echo strftime('%A %e %B %Y %H:%M uur',time()); //example current time
 	?> 
 	<br />
 	<?php
-	
+	// openingstijd van de dag, gebasseerd op welke dag het is en welke maand het is
 	$winterMonths = array('november', 'december', 'januari','februari', 'maart');
 	$summerMonths = array('april' , 'mei' , 'juni' , 'juli' , 'augustus' , 'september');
 	
@@ -67,5 +67,10 @@
 	 
 	 
 	 ?>
-
+	 <br /><br />
+	<div class="routeplanner">
+		<iframe src="geocodingExample.html" width="300px" height="250px" alt="routeplanner">			
+		</iframe>
+		
+	</div>
 </div>
