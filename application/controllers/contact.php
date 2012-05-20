@@ -6,7 +6,7 @@ class Contact extends CI_Controller {
    	{
    		
     	parent::__construct();
-		//$this->load->model("Contact_model");	
+		//$this->load->model("Openingstijden_model");	
 	}
 
 	/*
@@ -28,6 +28,25 @@ class Contact extends CI_Controller {
 	}
 	
 	
+	/*
+	 * Public function getCurrentDate()
+	 * 
+	 * Will get the current date, time, day of the week, etc. for displaying if they are open
+	 *	
+	
+	public function getCurrentDate()
+	{
+		// sets timezone to Amsterdam Europe
+		date_default_timezone_set('Europe/Amsterdam');
+ 		// Prints something like: Saturday 19 May 2012 17:12:46 
+		$currentDate = date('l j F Y G:i:s');
+		$data = $currentDate;
+		
+		$this->load->view("header", array("page" => "Contact", "pagetitle" => "Contact" ));
+		$this->load->view("contact", array("name" => $data));    		
+		$this->load->view("footer");
+		
+	} */
 	
 }
 ?>
