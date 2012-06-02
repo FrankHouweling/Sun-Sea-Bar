@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Contact extends CI_Controller {
+class Agenda extends CI_Controller {
 	
 	public function __construct()
    	{
@@ -12,7 +12,7 @@ class Contact extends CI_Controller {
 	 * 
 	 * Public function index()
 	 * 
-	 * Will display the basic contact information of the SunSeaBar
+	 * Will display the agenda items of the SunSeaBar
 	 * 
 	 * 
 	 */
@@ -20,11 +20,10 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view("header", array("page" => "Contact", "pagetitle" => "Contact"));
-		$this->load->view("contact");    		
+		$this->load->view("header", array("page" => "Agenda", "pagetitle" => "Agenda"));
+		$this->load->view("agenda");    		
 		$this->load->view("footer");
 	
 	}
-	
 }
 ?>
