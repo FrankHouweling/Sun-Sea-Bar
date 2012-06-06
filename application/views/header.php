@@ -28,6 +28,7 @@
 	
 <body>
 	<div class="topbar">
+		<center>
 				<?php
 					if( $page == "noTitle" )
 					{
@@ -53,4 +54,5 @@
 						<?php	
 					}
 				?>
-		</div>
+		</center>
+	</div>

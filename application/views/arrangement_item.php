@@ -3,7 +3,7 @@
 <div>				
 		
 		<div class="title">
-			   		<h2><?php echo $name["title"] ?></h2>
+			   		<center><h2><?php echo $name["title"] ?></h2></center>
 		</div>	 
 			   		<br />
 		<div class="content">	   		
@@ -15,7 +15,7 @@
 			   		<?php if ($price !== 0) ?>
 					 &euro; <?php echo number_format($price, 2, ",",","); ?>
 		</div>	   	
-			   			  
+				   			  
 			  		 
 </div>
 

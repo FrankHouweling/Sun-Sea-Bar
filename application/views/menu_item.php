@@ -3,7 +3,7 @@
 <div>				
 		
 		<div class="title">
-			   		<h2><?php echo $name["title"] ?></h2>
+			   		<center><h2><?php echo $name["title"] ?></h2></center>
 		</div>	 
 			   		<br />
 		<div class="content">	   		
