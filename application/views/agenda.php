@@ -11,11 +11,10 @@ $end = strpos($html, '</p>', $start);
 
 $paragraph = substr($html, $start, $end);
 
-echo $paragraph;
+$agendaOutput = explode('Copyright', $paragraph);
 
-//niet meer nodig...
-//$str = explode( 'class="Content"', $html ); 
-//echo $str[1];
+echo $agendaOutput[0];
+
 
 
 ?>
