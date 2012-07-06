@@ -57,13 +57,13 @@
 		public function addToCache( $text, $id )
 		{
 			
-			$get	=	$this->db->query("SELECT * FROM twittercache WHERE id = '" . $id . "' OR text = '" . $text . "'");
+			$get	=	$this->db->query("SELECT * FROM twittercache WHERE id = '" . $id . "' OR text = '" . mysqli::real_escape_string($text) . "'");
 			
 			$result	=	$get->result_array();
 			
 			if( count($result) == 0 AND str_replace("Vacature","",$text) == $text ){
 				
-				$this->db->query( "INSERT INTO twittercache( id, text ) VALUES('" . $id . "','" . $text . "')" );
+				$this->db->query( "INSERT INTO twittercache( id, text ) VALUES('" . $id . "','" . mysqli::real_escape_string($text) . "')" );
 			
 			}
 			

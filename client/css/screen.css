@@ -154,3 +154,16 @@ body
 	margin-left:-134.5px;
 	bottom:70px;
 }
+
+.topbar
+{
+	height: 48px ;
+	width: 100% ;
+	background-image: url( "./img/topbar-bg.gif" ) ;
+	background-color: #fff;
+	text-align:center;
+}
+.topbar img
+{
+	margin-top:13px;
+}
