@@ -1,7 +1,7 @@
 <br /> 
 <?php	
 //the following code extracts the agenda blocks of the http://www.sunseabar.nl/Agenda.aspx page
-//TODO cache agenda each night... makes it a lot faster...
+// it's being cached with the CodeIgniter function $this->output->cache(n); in the controller, refreshes every 720 min.
 
 $html = file_get_contents('http://www.sunseabar.nl/Agenda.aspx'); 
 

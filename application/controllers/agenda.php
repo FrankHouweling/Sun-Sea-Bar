@@ -21,7 +21,8 @@ class Agenda extends CI_Controller {
 	{
 
 		$this->load->view("header", array("page" => "Agenda", "pagetitle" => "Agenda"));
-		$this->load->view("agenda");    		
+		$this->load->view("agenda");   
+		$this->output->cache(720); 		
 		$this->load->view("footer");
 	
 	}

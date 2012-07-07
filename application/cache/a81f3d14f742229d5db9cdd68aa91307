@@ -1,0 +1,74 @@
+1341667096TS---><!doctype>
+<html>
+	
+	<head>
+		
+		<title>
+			Sun Sea Bar - Home
+		</title>
+		
+		<base href="http://localhost/~maurice/Sun-Sea-Bar/" />
+		
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		
+		<link rel="stylesheet" href="client/css/screen.css" />
+
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />  
+		<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> -->
+		<meta name="viewport" content = "width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1" />  
+
+		<link rel="apple-touch-startup-image" href="client/img/preload.jpg" />  
+
+		<link rel="apple-touch-icon" href="client/img/icon.png"/>  
+
+	</head>
+	
+<body>
+	<div class="topbar">
+		<center>
+											<h2>
+								Agenda							</h2>
+								</center>
+	</div><br /> 
+<p>
+<p><span style="text-decoration: underline;"><strong>9 juni 2012</strong></span></p>
+<p><strong>EK NEDERLAND - DENEMARKEN</strong></p>
+<p>Live deze EK wedstrijd bekijken op groot scherm.</p>
+<p>Iedereen is welkom!</p>
+<p>Start: 18:00 uur</p>
+<p>Dresscode: oranje</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><strong>14 juli 2012</strong></span></p>
+<p>SunSeaOpen</p>
+<p>Dit jaar<strong> footvolley, volleybal en strandvoetbal</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</p>
+        </div>
+		<div style="clear: both;"></div>
+    </div>
+
+        </div>
+        <!-- contentBlock -->
+        <div class="footer">
+            <div class="footerleft">
+                
+	
+
+
+
+
+
+
+
+		<!-- <div id="menuopen">
+			<div id="left"></div>
+			<a href="index.php/nav"><img src="client/img/menu-button.png" alt="Menu Button" /></a>
+			<div id="right"></div> -->
+		</div>		
+	</body>
+	
+</html>
